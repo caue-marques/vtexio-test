@@ -10,9 +10,6 @@
     ]
   },
   "flex-layout.row#main-search-result": {
-    "props": {
-      "marginTop": 4
-    },
     "children": [
       "flex-layout.col#left-search-result",
       "flex-layout.col#right-search-result"
@@ -32,22 +29,13 @@
   },
   "flex-layout.col#right-search-result": {
     "props": {
-      "marginRight": 6,
-      "marginTop": 5
-    },
-    "children": [
-      "flex-layout.row#row-top-products",
-      "search-fetch-previous",
-      "search-content"
-    ]
-  },
-  "flex-layout.row#row-top-products": {
-    "props": {
-      "horizontalAlign": "between"
+      "marginRight": 6
     },
     "children": [
       "total-products.v2",
-      "order-by.v2"
+      "order-by.v2",
+      "search-fetch-previous",
+      "search-content"
     ]
   } 
 }
