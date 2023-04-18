@@ -1,26 +1,44 @@
 {
   "store.search": {
     "blocks": [
-      "search-result-layout"
-    ]
-  },
-  "search-result-layout": {
-    "blocks": [
-      "search-result-layout.desktop",
-      "search-result-layout.mobile",
-      "search-not-found-layout"
+      "search-result-layout.desktop"
     ]
   },
   "search-result-layout.desktop": {
     "children": [
+      "flex-layout.row#main-search-result"
+    ]
+  },
+  "flex-layout.row#main-search-result": {
+    "children": [
+      "flex-layout.col#left-search-result",
+      "flex-layout.col#right-search-result"
+    ]
+  },
+  "flex-layout.col#left-search-result": {
+    "props": {
+      "marginLeft": 4,
+      "width": "15%"
+    },
+    "children": [
       "breadcrumb.search",
       "search-title.v2",
-      "total-products.v2",
-      "order-by.v2",
-      "search-fetch-previous",
-      "search-content",
       "filter-navigator.v3",
       "search-fetch-more"
     ]
-  }
+  },
+  "flex-layout.col#right-search-result": {
+    "props": {
+      "marginRight": 6
+    },
+    "children": [
+      "total-products.v2",
+      "order-by.v2",
+      "search-fetch-previous",
+      "search-content"
+    ]
+  } 
 }
+
+
+     
