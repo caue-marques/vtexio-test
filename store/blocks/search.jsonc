@@ -18,7 +18,9 @@
   "flex-layout.col#left-search-result": {
     "props": {
       "marginLeft": 4,
-      "width": "15%"
+      "width": "15%",
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true
     },
     "children": [
       "breadcrumb.search",
@@ -29,15 +31,24 @@
   },
   "flex-layout.col#right-search-result": {
     "props": {
-      "marginRight": 6
+      "marginRight": 6,
+      "blockClass": "right-search-result"
     },
     "children": [
-      "total-products.v2",
-      "order-by.v2",
+      "flex-layout.row#teste",
       "search-fetch-previous",
       "search-content"
     ]
-  } 
+  } ,
+  "flex-layout.row#teste": {
+    "props": {
+      "colSizing": "auto"
+    },
+    "children": [
+      "total-products.v2",
+      "order-by.v2"
+    ]
+  }
 }
 
 
