@@ -2,8 +2,95 @@
   "store.product": {
     "children": [
       "breadcrumb",
-      "flex-layout.row#main"
+      "condition-layout.product#retro-mixer",
+      "flex-layout.row#main",
+      "condition-layout.product#tab-notebook"
     ]
+  },
+  "condition-layout.product#tab-notebook": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "productId",
+          "arguments": {
+            "id": "2027993"
+          }
+        }
+      ]
+    },
+    "children": [
+      "tab-layout#notebook-fire"
+    ]
+  },
+  "tab-layout#notebook-fire": {
+    "children": [
+      "tab-list#notebook-fire",
+      "tab-content#notebook-fire"
+    ]
+  },
+  "tab-list#notebook-fire": {
+    "children": [
+      "tab-list.item#note1",
+      "tab-list.item#note2"
+    ]
+  },
+  "tab-list.item#note1": {
+    "props": {
+      "tabId": "note1",
+      "label": "Fotos conceituais de itens de cozinha",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#note2": {
+    "props": {
+      "tabId": "note2",
+      "label": "Mais foto conceituais de itens de cozinha"
+    }
+  },
+  "tab-content#notebook-fire": {
+    "children": [
+      "tab-content.item#note1",
+      "tab-content.item#note2"
+    ]
+  },
+  "tab-content.item#note1": {
+    "props": {
+      "tabId": "note1"
+    },
+    "children": [
+      "slider-layout#notebook1"
+    ]
+  },
+  "tab-content.item#note2": {
+    "props": {
+      "tabId": "note2"
+    },
+    "children": [
+      "slider-layout#notebook2"
+    ]
+  },
+  "condition-layout.product#retro-mixer": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "productId",
+          "arguments": {
+            "id": "2027993"
+          }
+        }
+      ]
+    },
+    "children": [
+      "image#retro-mixer-banner"
+    ]
+  },
+  "image#retro-mixer-banner": {
+    "props": {
+      "src": "https://appliancetheme.vtexassets.com/assets/app/src/retroimage___92a8271aac7c51d2059193bdbe019016.jpg",
+      "width": "100%",
+      "height": "200px",
+      "blockClass": "cover"
+    }
   },
   "flex-layout.row#main": {
     "props": {
@@ -37,7 +124,6 @@
     "props": {
       "showSavings": true,
       "showListPrice": true
-      
     }
   },
   "flex-layout.row#qty-sku": {
